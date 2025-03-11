@@ -110,8 +110,9 @@ export class Video extends Media {
     const key = `${this.key}/${src}`;
     let video = Video.pool[key];
     if (!video) {
+      alert('VIDEO CREATED');
       video = document.createElement('video');
-      video.crossOrigin = 'anonymous';
+      // video.crossOrigin = 'anonymous';
 
       const parsedSrc = new URL(src, window.location.origin);
       if (parsedSrc.pathname.endsWith('.m3u8')) {
