@@ -29,8 +29,9 @@ export class Audio extends Media {
     const key = `${this.key}/${src}`;
     let audio = Audio.pool[key];
     if (!audio) {
+      alert('AUDIO CREATED');
       audio = document.createElement('audio');
-      audio.crossOrigin = 'anonymous';
+      //audio.crossOrigin = 'anonymous';
       audio.src = src;
       Audio.pool[key] = audio;
     }
